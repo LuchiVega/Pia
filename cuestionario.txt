@@ -1,0 +1,61 @@
+Trabajo práctico N°3 - Laboratorio de Algoritmos y Estructuras de Datos
+
+Preentrega Django
+
+Este trabajo práctico es de carácter individual.
+
+Vamos a avanzar en el desarrollo de sus sitios web personales. Hasta ahora sus sitios consisten solamente de sus bellos portfolios. El próximo paso es integrar un blog personal a sus portfolios que permita gestionar usuarios y agregar comentarios a cada uno de los posteos del blog. Para eso, vamos a empezar a trabajar con un framework web hecho en python llamado django. 
+
+Dadas nuestras restricciones temporales, este trabajo práctico está pensado como una “preentrega” que los introducirá al mundo de django. Eso significa que vamos a “retomar” este proyecto después de las vacaciones de invierno.
+
+Para comenzar, les pido que respondan al siguiente cuestionario, evitando utilizar IAs (es decir, a la vieja usanza, googleando!!).
+
+Cuestionario:
+1.	¿Qué es django y por qué lo usaríamos?
+Django es un software que permite desarrollar aplicaciones web de forma rápida y eficiente. Lo usaríamos porque agrupa funcionalidades comunes del desarrollo web, como la autenticación de usuarios, la recuperación de información de bases de datos y la gestión de cookies, en un gran conjunto de módulos reutilizables, conocido como marco de aplicación web (AWS, n.d.; Mozilla Developer Network, n.d.). Esto facilita a los desarrolladores organizar y escribir su código de manera más eficiente, reduciendo significativamente el tiempo de desarrollo web. Además, es rápido para desarrollar, rentable y muy popular, lo que asegura una gran comunidad de soporte (Grupo EBIM, n.d.).
+
+2.	¿Qué es el patrón MTV (Model-Template-View) en django? (simplificado de MVC). Compará MTV con MVC.
+El patrón MTV es la arquitectura que utiliza Django, la cual es una adaptación del patrón MVC.
+Model: En ambos patrones, el Model representa los datos de la aplicación y la lógica de negocio, interactuando con la base de datos para almacenar y recuperar información.
+Template: En Django, el Template es responsable de la presentación de la interfaz de usuario, es decir, cómo se ven los datos al usuario. Esto es lo que en un patrón MVC tradicional se conoce como View (Scribd, n.d.).
+View (Vista): En Django, la Vista es una función o clase que recibe la solicitud HTTP del usuario, procesa la lógica de negocio y devuelve una respuesta HTTP. Esta Vista de Django actúa de manera similar al Controlador en el patrón MVC, manejando la interacción entre el Model y el Template o View (Programación Fácil, n.d.; Urian Viera, n.d.).
+En resumen, la principal diferencia radica en la terminología y la distribución de responsabilidades: lo que en MVC es la View en Django es el Template, y lo que en MVC es el Controlador en Django es la View.
+
+
+3.	¿Qué entendemos por app en django?
+En Django, una "app" (aplicación) es un módulo Python autocontenido que se encarga de una funcionalidad específica dentro de un proyecto web (Mozilla Developer Network, n.d.). Django promueve un diseño modular, donde cada aplicación es independiente y puede ser reutilizada en diferentes proyectos. Por ejemplo, en un proyecto de blog, podrías tener una app para los posts, otra para los comentarios y otra para la gestión de usuarios (Django Project documentation, n.d.).
+4.	¿Qué es el flujo request-response en django?
+El flujo request-response en Django describe cómo una aplicación web procesa las interacciones del usuario desde que se hace una petición hasta que se envía una respuesta (Django Project documentation, n.d.). Básicamente, funciona así:
+Solicitud: Un usuario realiza una acción en el navegador. Esto genera una solicitud HTTP que se envía al servidor web donde se aloja la aplicación Django.
+Servidor Web: El servidor web recibe la solicitud y la pasa a Django.
+URLconf: Django utiliza su configuración de URL para mapear la URL de la solicitud a una vista específica.
+Vista: La vista es una función o clase de Python que recibe la solicitud. Contiene la lógica para procesar los datos de la solicitud.
+Respuesta: Una vez que la vista ha procesado la solicitud, genera una respuesta HTTP. Esta respuesta puede ser una página HTML renderizada una redirección, un JSON, etc.
+Servidor Web: El servidor web envía esta respuesta de vuelta al navegador del usuario.
+Navegador: El navegador recibe la respuesta y la muestra al usuario (OpenWebinars.net, n.d.).
+
+5.	¿Qué es el concepto de ORM (Object-Relational Mapping)?
+ORM es una técnica de programación que permite a los desarrolladores interactuar con bases de datos relacionales utilizando objetos del lenguaje de programación que están usando en lugar de escribir código SQL directamente (Mozilla Developer Network, n.d.; Wikipedia, n.d.).
+En Django, el ORM permite definir tus modelos y luego realizar operaciones de base de datos utilizando métodos de estos objetos Python. El ORM de Django traduce automáticamente estas operaciones de objetos a sentencias SQL y viceversa (IBM, n.d.).
+Ventajas del ORM:
+Abstracción: No necesitas escribir SQL manualmente, lo que simplifica el desarrollo y reduce errores.
+Portabilidad: Tu código es más portable entre diferentes sistemas de bases de datos, ya que el ORM se encarga de las diferencias.
+Seguridad: Ayuda a prevenir ataques de inyección SQL al manejar automáticamente el escape de datos.
+Productividad: Agiliza el desarrollo al permitirte trabajar con la base de datos.
+
+6.	¿Qué son los templates en django?
+En Django, los templates son archivos de texto que contienen la estructura y el diseño de la interfaz de usuario de tu aplicación web (Mozilla Developer Network, n.d.). Permiten separar la lógica de la aplicación de la presentación visual de los datos.
+Las plantillas de Django utilizan un lenguaje de marcado especial que permite incrustar variables y etiquetas. La vista de Django procesa una plantilla, le pasa los datos que necesita mostrar, y la plantilla los renderiza en una respuesta HTML que se envía al navegador del usuario (Django Project documentation, n.d.; OpenWebinars.net, n.d.).
+
+7.	Leé con detenimiento este django at a glance: https://docs.djangoproject.com/en/5.2/intro/overview/ 
+8.	¿Cómo se lo instala? https://docs.djangoproject.com/en/5.2/intro/install/ 
+Para instalarlo hay que escribir en el cmd
+python -m pip install Django
+
+Ahora que saben un poco más sobre django, los invito a hacer el siguiente tutorial, hasta la parte 8 inclusive:
+●	https://docs.djangoproject.com/en/5.2/intro/tutorial01/
+
+Requisitos formales de la entrega:
+●	Respetar las normas APA para el formato del documento, para las citas y para las referencias bibliográficas.
+
+Eso sería todo. La fecha de entrega del trabajo práctico es el jueves 10 de julio a través del classroom. Deben crear un repositorio en Github del proyecto e ir pusheando sus avances allí (recuerden agregar un README.md al repositorio que lo explique brevemente). Es decir, tanto las respuestas al cuestionario (en un simple .txt alcanza), como el tutorial hecho por ustedes deben estar subidos al repositorio.
